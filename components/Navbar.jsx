@@ -30,11 +30,11 @@ const NavBar = () => {
   return (
     <Box paddingX={"16px"} maxW={"1300px"} m={"0 auto"}>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={"white"}
+        color={"gray.600"}
         minH={"60px"}
         py={{ base: 2 }}
-        px={{ base: 4 }}
+        px={{ base: 2 }}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -58,8 +58,8 @@ const NavBar = () => {
           <Link href={"#"}>
             <Image
               rounded={"md"}
-              alt={"feature image"}
-              src={"/club-logo.png"}
+              alt={"Whitfords Cricket Club Logo"}
+              src={"/club-logo.svg"}
               objectFit={"cover"}
               boxSize={"100px"}
             />
@@ -82,10 +82,17 @@ const NavBar = () => {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"blue.400"}
-            href={"#"}
+            bg={"brand.navy"}
+            as={Link}
+            href={
+              "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE"
+            }
+            target="_blank"
+            onClick={() => {}}
             _hover={{
-              bg: "blue.300",
+              textDecoration: "none",
+              color: "brand.navy",
+              bg: "brand.tint",
             }}
           >
             Register To Play!
@@ -102,8 +109,8 @@ const NavBar = () => {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const linkHoverColor = "brand.navy";
+  const popoverContentBgColor = "white";
 
   return (
     <Stack direction={"row"} spacing={4} alignItems={"center"} flex>
@@ -121,6 +128,7 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
+                target={navItem.external && "_blank"}
               >
                 {navItem.label}
               </Link>
@@ -149,7 +157,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, href, subLabel, external }) => {
   return (
     <Link
       href={href}
@@ -157,18 +165,29 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("blue.50", "gray.900") }}
+      target={external && "_blank"}
+      _hover={{ bg: "brand.navy" }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "blue.400" }}
+            _groupHover={{
+              color: "white",
+            }}
             fontWeight={500}
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          <Text
+            transition={"all .3s ease"}
+            _groupHover={{
+              color: "brand.tint",
+            }}
+            fontSize={"sm"}
+          >
+            {subLabel}
+          </Text>
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -200,7 +219,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, href, external }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -209,6 +228,7 @@ const MobileNavItem = ({ label, children, href }) => {
         py={2}
         as={Link}
         href={href ?? "#"}
+        target={external && "_blank"}
         justify={"space-between"}
         align={"center"}
         _hover={{
@@ -243,7 +263,12 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link
+                key={child.label}
+                py={2}
+                href={child.href}
+                target={child.exteral && "_blank"}
+              >
                 {child.label}
               </Link>
             ))}
@@ -296,12 +321,44 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
+    label: "Our Club",
+    children: [
+      {
+        label: "Photos",
+        subLabel: "Some highlights over the years",
+        href: "#",
+      },
+      {
+        label: "Year Book",
+        subLabel: "Downloadable Copies of our yearbook",
+        href: "#",
+      },
+      {
+        label: "Premieships",
+        subLabel: "Details from all of our Premieships",
+        href: "#",
+      },
+      {
+        label: "Register",
+        subLabel: "sign up to play for us",
+        href: "https://play.cricket.com.au/club/whitfords-cricket-club/804bfad7-86d8-eb11-a7ad-2818780da0cc",
+        external: true,
+      },
+      {
+        label: "Watch",
+        subLabel: "stream our games",
+        href: "https://matchcentre.aus.frogbox.live/matches?entity=1455",
+        external: true,
+      },
+    ],
+  },
+  {
     label: "Calendar",
     children: [
       {
         label: "Fixtures",
         subLabel: "",
-        href: "#",
+        href: "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE",
       },
       {
         label: "Events",
@@ -312,10 +369,6 @@ const NAV_ITEMS = [
   },
   {
     label: "Sponsors",
-    href: "#",
-  },
-  {
-    label: "Year Book",
     href: "#",
   },
 ];

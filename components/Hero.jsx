@@ -40,10 +40,11 @@ const Hero = () => {
               fontSize={"sm"}
               fontWeight={600}
               color={"white"}
-              bg={"blue.400"}
+              bg={"brand.navy"}
               href={"#"}
               _hover={{
-                bg: "blue.300",
+                bg: "brand.tint",
+                color: "brand.navy",
               }}
             >
               Register To Play!
