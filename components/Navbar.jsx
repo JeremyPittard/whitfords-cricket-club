@@ -11,7 +11,6 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  useColorModeValue,
   useBreakpointValue,
   useDisclosure,
   VisuallyHidden,
@@ -28,16 +27,13 @@ const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box paddingX={"16px"} maxW={"1300px"} m={"0 auto"}>
+    <Box padding={"16px"} maxW={"1300px"} m={"0 auto"}>
       <Flex
         bg={"white"}
         color={"gray.600"}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 2 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
         <Flex
@@ -66,7 +62,7 @@ const NavBar = () => {
             <VisuallyHidden>Home</VisuallyHidden>
           </Link>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={"auto"} mr={32}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -79,7 +75,7 @@ const NavBar = () => {
         >
           <Button
             display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
+            fontSize={"md"}
             fontWeight={600}
             color={"white"}
             bg={"brand.navy"}
@@ -108,7 +104,7 @@ const NavBar = () => {
 };
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
+  const linkColor = "gray.600";
   const linkHoverColor = "brand.navy";
   const popoverContentBgColor = "white";
 
@@ -121,7 +117,7 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? "#"}
-                fontSize={"sm"}
+                fontSize={"md"}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
@@ -184,7 +180,7 @@ const DesktopSubNav = ({ label, href, subLabel, external }) => {
             _groupHover={{
               color: "brand.tint",
             }}
-            fontSize={"sm"}
+            fontSize={"md"}
           >
             {subLabel}
           </Text>
@@ -207,11 +203,7 @@ const DesktopSubNav = ({ label, href, subLabel, external }) => {
 
 const MobileNav = () => {
   return (
-    <Stack
-      bg={useColorModeValue("white", "gray.800")}
-      p={4}
-      display={{ md: "none" }}
-    >
+    <Stack bg={"white"} p={4} display={{ md: "none" }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -235,10 +227,7 @@ const MobileNavItem = ({ label, children, href, external }) => {
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
+        <Text fontWeight={600} color={"gray.600"}>
           {label}
         </Text>
         {children && (
@@ -258,7 +247,7 @@ const MobileNavItem = ({ label, children, href, external }) => {
           pl={4}
           borderLeft={1}
           borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.700")}
+          borderColor={"gray.200"}
           align={"start"}
         >
           {children &&
@@ -357,12 +346,12 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Fixtures",
-        subLabel: "",
+        subLabel: "fixtures for upcoming matches on mycricket",
         href: "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE",
       },
       {
         label: "Events",
-        subLabel: "",
+        subLabel: "upcoming and past events",
         href: "#",
       },
     ],

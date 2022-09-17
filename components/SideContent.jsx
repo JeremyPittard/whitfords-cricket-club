@@ -44,7 +44,7 @@ const SideContent = () => {
             color={"blue.400"}
             fontWeight={600}
             fontSize={"sm"}
-            bg={useColorModeValue("blue.50", "blue.900")}
+            bg={"blue.50"}
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
@@ -58,11 +58,7 @@ const SideContent = () => {
           </Text>
           <Stack
             spacing={4}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue("gray.100", "gray.700")}
-              />
-            }
+            divider={<StackDivider borderColor={"gray.100"} />}
           >
             {/* <Feature
               icon={

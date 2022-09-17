@@ -2,7 +2,7 @@ import {
   Stack,
   Flex,
   Button,
-  Text,
+  Heading,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -12,9 +12,7 @@ const Hero = () => {
     <Flex
       w={"full"}
       h={"80vh"}
-      backgroundImage={
-        "url(https://scontent.fper7-1.fna.fbcdn.net/v/t1.6435-9/78670300_788679748241928_4534034749177462784_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=AYYw9vNLDcgAX8Aziye&_nc_ht=scontent.fper7-1.fna&oh=00_AT-ZU3aCKq2Frpdwv7UtkI0kS7EkeIhvH-liT6QImIlaOw&oe=6323C938)"
-      }
+      backgroundImage={"url(/img/macdonald-reserve.jpg)"}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
@@ -25,15 +23,15 @@ const Hero = () => {
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
-          <Text
+          <Heading
+            as="h1"
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
           >
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-            eiusmod tempor
-          </Text>
+            Whitfords Cricket Club
+          </Heading>
           <Stack direction={"row"}>
             <Button
               display={{ base: "none", md: "inline-flex" }}
