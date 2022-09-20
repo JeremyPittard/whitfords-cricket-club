@@ -6,6 +6,7 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     domains: ["images.unsplash.com"],
   },
+  optimizeFonts: true,
 };
 
 module.exports = nextConfig;

@@ -12,7 +12,6 @@ import {
   PopoverContent,
   useDisclosure,
   VisuallyHidden,
-  Image,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -24,7 +23,7 @@ import RegisterButton from "./RegisterButton";
 import { NAV_ITEMS } from "../utils/navData";
 
 import NextLink from "next/link";
-import { WrappedImage } from "./WrappedImage";
+import ClubLogo from "./ClubLogo";
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -56,15 +55,7 @@ const NavBar = () => {
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <NextLink href={"/"} passHref>
             <Link>
-              <WrappedImage
-                rounded={"md"}
-                alt={"Whitfords Cricket Club Logo"}
-                src={"/club-logo.svg"}
-                objectFit={"cover"}
-                boxSize={"100px"}
-                width="100px"
-                height={"100px"}
-              />
+              <ClubLogo height={100} width={100} colour={"#1b135c"} />
               <VisuallyHidden>Home</VisuallyHidden>
             </Link>
           </NextLink>
@@ -108,6 +99,7 @@ const DesktopNav = ({ navItems }) => {
                   fontSize={"md"}
                   fontWeight={500}
                   color={linkColor}
+                  href="#"
                   _hover={{
                     textDecoration: "none",
                     color: linkHoverColor,
@@ -263,7 +255,7 @@ const MobileNavItem = ({ label, children, href, external }) => {
             children.map((child) => (
               <NextLink passHref href={child.href} key={`c-${child.label}`}>
                 <Link
-                  py={2}
+                  py={4}
                   href={child.href}
                   target={child.exteral && "_blank"}
                 >

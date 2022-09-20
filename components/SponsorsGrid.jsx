@@ -24,13 +24,7 @@ const Sponsor = (props) => {
       </chakra.h3>
       {props.showDetails && (
         <>
-          <chakra.p
-            fontSize="sm"
-            color="gray.500"
-            _dark={{
-              color: "gray.400",
-            }}
-          >
+          <chakra.p fontSize="sm" color="gray.600">
             {props.children}
           </chakra.p>
         </>
@@ -69,12 +63,9 @@ const SponsorsGrid = ({ showDetails, sponsorsList = dummySponsors }) => {
               base: "3xl",
               sm: "4xl",
             }}
-            lineHeight="8"
-            fontWeight="extrabold"
-            letterSpacing="tight"
-            _light={{
-              color: "gray.900",
-            }}
+            fontWeight="bold"
+            color={"brand.500"}
+            lineHeight={8}
           >
             Our Sponsors
           </chakra.p>
@@ -86,10 +77,7 @@ const SponsorsGrid = ({ showDetails, sponsorsList = dummySponsors }) => {
             mx={{
               lg: "auto",
             }}
-            color="gray.500"
-            _dark={{
-              color: "gray.400",
-            }}
+            color="gray.600"
           >
             Support the people that support us.
           </chakra.p>

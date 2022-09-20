@@ -92,7 +92,7 @@ const Footer = () => {
       <Divider w="95%" mx="auto" h="3.5px" borderColor={"brand.300"} />
       <VStack py={6}>
         <HStack justify="center">
-          <Link>
+          <Link p={4}>
             <Icon
               color="white"
               _hover={{ color: "brand.200" }}
@@ -101,7 +101,7 @@ const Footer = () => {
               as={FaFacebookF}
             />
           </Link>
-          <Link>
+          <Link p={4}>
             <Icon
               color="white"
               _hover={{ color: "brand.200" }}
@@ -110,7 +110,7 @@ const Footer = () => {
               as={FiTwitter}
             />
           </Link>
-          <Link>
+          <Link p={4}>
             <Icon
               color="white"
               _hover={{ color: "brand.200" }}
@@ -119,7 +119,7 @@ const Footer = () => {
               as={GrInstagram}
             />
           </Link>
-          <Link>
+          <Link p={4}>
             <Icon
               color="white"
               _hover={{ color: "brand.200" }}

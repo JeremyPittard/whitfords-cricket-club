@@ -31,14 +31,13 @@ const Feature = ({ img, content, title, rightImage = true, url }) => {
               mb={5}
               textAlign={{ base: "center", sm: "left" }}
               color="gray.600"
-              _dark={{ color: "gray.400" }}
               fontSize={{ md: "lg" }}
             >
               {content}
             </chakra.p>
             <RegisterButton />
           </Box>
-          <Box w="full" h="full" bg="gray.200" _dark={{ bg: "gray.700" }}>
+          <Box w="full" h="full" bg="gray.200">
             <WrappedImage
               width={592}
               height={384}
@@ -70,7 +69,6 @@ const Feature = ({ img, content, title, rightImage = true, url }) => {
               fontWeight="bold"
               textAlign={{ base: "center", md: "left" }}
               color="brand.500"
-              _dark={{ color: "brand.200" }}
               lineHeight={{ md: "shorter" }}
             >
               {title}
@@ -79,14 +77,13 @@ const Feature = ({ img, content, title, rightImage = true, url }) => {
               mb={5}
               textAlign={{ base: "center", sm: "left" }}
               color="gray.600"
-              _dark={{ color: "gray.400" }}
               fontSize={{ md: "lg" }}
             >
               {content}
             </chakra.p>
             <RegisterButton />
           </Box>
-          <Box w="full" h="full" bg="gray.200" _dark={{ bg: "gray.700" }}>
+          <Box w="full" h="full" bg="gray.200">
             <WrappedImage
               width={592}
               height={384}
