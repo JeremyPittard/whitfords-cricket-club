@@ -1,56 +1,44 @@
 import {
-  Stack,
+  Box,
+  chakra,
   Flex,
-  Button,
+  useColorModeValue,
+  Stack,
   Heading,
-  VStack,
-  useBreakpointValue,
 } from "@chakra-ui/react";
+import RegisterButton from "./RegisterButton";
 
-const Hero = () => {
+const Hero = ({ title, img, isLarge, hideButton }) => {
   return (
-    <Flex
-      w={"full"}
-      h={"80vh"}
-      backgroundImage={"url(/img/macdonald-reserve.jpg)"}
-      backgroundSize={"cover"}
-      backgroundPosition={"center center"}
-    >
-      <VStack
-        w={"full"}
-        justify={"center"}
-        px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+    <chakra.header>
+      <Box
+        w="full"
+        h={isLarge ? "container.sm" : "sm"}
+        backgroundImage={img}
+        bgPos="center"
+        bgSize="cover"
       >
-        <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
-          <Heading
-            as="h1"
-            color={"white"}
-            fontWeight={700}
-            lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
-          >
-            Whitfords Cricket Club
-          </Heading>
-          <Stack direction={"row"}>
-            <Button
-              display={{ base: "none", md: "inline-flex" }}
-              fontSize={"sm"}
-              fontWeight={600}
-              color={"white"}
-              bg={"brand.navy"}
-              href={"#"}
-              _hover={{
-                bg: "brand.tint",
-                color: "brand.navy",
-              }}
+        <Flex
+          align="center"
+          pos="relative"
+          justify="center"
+          boxSize="full"
+          bg="blackAlpha.400"
+        >
+          <Stack textAlign="center" alignItems="center" spacing={6}>
+            <Heading
+              fontSize={["3xl", , "5xl"]}
+              fontWeight="bold"
+              color="white"
+              textTransform="uppercase"
             >
-              Register To Play!
-            </Button>
+              {title}
+            </Heading>
+            {!hideButton && <RegisterButton />}
           </Stack>
-        </Stack>
-      </VStack>
-    </Flex>
+        </Flex>
+      </Box>
+    </chakra.header>
   );
 };
 

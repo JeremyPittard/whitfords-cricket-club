@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -11,7 +10,6 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  useBreakpointValue,
   useDisclosure,
   VisuallyHidden,
   Image,
@@ -22,6 +20,11 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import RegisterButton from "./RegisterButton";
+import { NAV_ITEMS } from "../utils/navData";
+
+import NextLink from "next/link";
+import { WrappedImage } from "./WrappedImage";
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -51,19 +54,23 @@ const NavBar = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Link href={"#"}>
-            <Image
-              rounded={"md"}
-              alt={"Whitfords Cricket Club Logo"}
-              src={"/club-logo.svg"}
-              objectFit={"cover"}
-              boxSize={"100px"}
-            />
-            <VisuallyHidden>Home</VisuallyHidden>
-          </Link>
+          <NextLink href={"/"} passHref>
+            <Link>
+              <WrappedImage
+                rounded={"md"}
+                alt={"Whitfords Cricket Club Logo"}
+                src={"/club-logo.svg"}
+                objectFit={"cover"}
+                boxSize={"100px"}
+                width="100px"
+                height={"100px"}
+              />
+              <VisuallyHidden>Home</VisuallyHidden>
+            </Link>
+          </NextLink>
 
           <Flex display={{ base: "none", md: "flex" }} ml={"auto"} mr={32}>
-            <DesktopNav />
+            <DesktopNav navItems={NAV_ITEMS} />
           </Flex>
         </Flex>
 
@@ -73,50 +80,69 @@ const NavBar = () => {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"md"}
-            fontWeight={600}
-            color={"white"}
-            bg={"brand.navy"}
-            as={Link}
-            href={
-              "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE"
-            }
-            target="_blank"
-            onClick={() => {}}
-            _hover={{
-              textDecoration: "none",
-              color: "brand.navy",
-              bg: "brand.tint",
-            }}
-          >
-            Register To Play!
-          </Button>
+          <RegisterButton />
         </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav navItems={NAV_ITEMS} />
       </Collapse>
     </Box>
   );
 };
 
-const DesktopNav = () => {
+const DesktopNav = ({ navItems }) => {
   const linkColor = "gray.600";
-  const linkHoverColor = "brand.navy";
+  const linkHoverColor = "brand.500";
   const popoverContentBgColor = "white";
 
   return (
     <Stack direction={"row"} spacing={4} alignItems={"center"} flex>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
+      {navItems.map((navItem) => (
+        <Box key={"b" + navItem.label}>
+          {navItem.children ? (
+            <Popover trigger={"hover"} placement={"bottom-start"}>
+              <PopoverTrigger>
+                <Link
+                  p={2}
+                  fontSize={"md"}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: "none",
+                    color: linkHoverColor,
+                  }}
+                  target={navItem.external && "_blank"}
+                >
+                  {navItem.label}
+                </Link>
+              </PopoverTrigger>
+
+              {navItem.children && (
+                <PopoverContent
+                  border={0}
+                  boxShadow={"xl"}
+                  bg={popoverContentBgColor}
+                  p={4}
+                  rounded={"xl"}
+                  minW={"sm"}
+                >
+                  <Stack>
+                    {navItem.children.map((child) => (
+                      <DesktopSubNav key={`d-${child.label}`} {...child} />
+                    ))}
+                  </Stack>
+                </PopoverContent>
+              )}
+            </Popover>
+          ) : (
+            <NextLink
+              href={navItem.href ?? "#"}
+              target={navItem.external && "_blank"}
+              passHref
+            >
               <Link
                 p={2}
-                href={navItem.href ?? "#"}
                 fontSize={"md"}
                 fontWeight={500}
                 color={linkColor}
@@ -124,29 +150,11 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
-                target={navItem.external && "_blank"}
               >
                 {navItem.label}
               </Link>
-            </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
+            </NextLink>
+          )}
         </Box>
       ))}
     </Stack>
@@ -155,57 +163,58 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel, external }) => {
   return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      target={external && "_blank"}
-      _hover={{ bg: "brand.navy" }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
+    <NextLink passHref href={href}>
+      <Link
+        role={"group"}
+        display={"block"}
+        p={2}
+        rounded={"md"}
+        target={external && "_blank"}
+        _hover={{ bg: "brand.500" }}
+      >
+        <Stack direction={"row"} align={"center"}>
+          <Box>
+            <Text
+              transition={"all .3s ease"}
+              _groupHover={{
+                color: "white",
+              }}
+              fontWeight={500}
+            >
+              {label}
+            </Text>
+            <Text
+              transition={"all .3s ease"}
+              _groupHover={{
+                color: "brand.200",
+              }}
+              fontSize={"md"}
+            >
+              {subLabel}
+            </Text>
+          </Box>
+          <Flex
             transition={"all .3s ease"}
-            _groupHover={{
-              color: "white",
-            }}
-            fontWeight={500}
+            transform={"translateX(-10px)"}
+            opacity={0}
+            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+            justify={"flex-end"}
+            align={"center"}
+            flex={1}
           >
-            {label}
-          </Text>
-          <Text
-            transition={"all .3s ease"}
-            _groupHover={{
-              color: "brand.tint",
-            }}
-            fontSize={"md"}
-          >
-            {subLabel}
-          </Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
+            <Icon color={"brand.200"} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
+    </NextLink>
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ navItems }) => {
   return (
     <Stack bg={"white"} p={4} display={{ md: "none" }}>
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+      {navItems.map((navItem) => (
+        <MobileNavItem key={`m-${navItem.label}`} {...navItem} />
       ))}
     </Stack>
   );
@@ -252,114 +261,20 @@ const MobileNavItem = ({ label, children, href, external }) => {
         >
           {children &&
             children.map((child) => (
-              <Link
-                key={child.label}
-                py={2}
-                href={child.href}
-                target={child.exteral && "_blank"}
-              >
-                {child.label}
-              </Link>
+              <NextLink passHref href={child.href} key={`c-${child.label}`}>
+                <Link
+                  py={2}
+                  href={child.href}
+                  target={child.exteral && "_blank"}
+                >
+                  {child.label}
+                </Link>
+              </NextLink>
             ))}
         </Stack>
       </Collapse>
     </Stack>
   );
 };
-
-// const NAV_ITEMS = [
-//   {
-//     label: "Inspiration",
-//     children: [
-//       {
-//         label: "Explore Design Work",
-//         subLabel: "Trending Design to inspire you",
-//         href: "#",
-//       },
-//       {
-//         label: "New & Noteworthy",
-//         subLabel: "Up-and-coming Designers",
-//         href: "#",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Find Work",
-//     children: [
-//       {
-//         label: "Job Board",
-//         subLabel: "Find your dream design job",
-//         href: "#",
-//       },
-//       {
-//         label: "Freelance Projects",
-//         subLabel: "An exclusive list for contract work",
-//         href: "#",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Learn Design",
-//     href: "#",
-//   },
-//   {
-//     label: "Hire Designers",
-//     href: "#",
-//   },
-// ];
-
-const NAV_ITEMS = [
-  {
-    label: "Our Club",
-    children: [
-      {
-        label: "Photos",
-        subLabel: "Some highlights over the years",
-        href: "#",
-      },
-      {
-        label: "Year Book",
-        subLabel: "Downloadable Copies of our yearbook",
-        href: "#",
-      },
-      {
-        label: "Premieships",
-        subLabel: "Details from all of our Premieships",
-        href: "#",
-      },
-      {
-        label: "Register",
-        subLabel: "sign up to play for us",
-        href: "https://play.cricket.com.au/club/whitfords-cricket-club/804bfad7-86d8-eb11-a7ad-2818780da0cc",
-        external: true,
-      },
-      {
-        label: "Watch",
-        subLabel: "stream our games",
-        href: "https://matchcentre.aus.frogbox.live/matches?entity=1455",
-        external: true,
-      },
-    ],
-  },
-  {
-    label: "Calendar",
-    children: [
-      {
-        label: "Fixtures",
-        subLabel: "fixtures for upcoming matches on mycricket",
-        href: "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE",
-      },
-      {
-        label: "Events",
-        subLabel: "upcoming and past events",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Sponsors",
-    href: "#",
-  },
-];
 
 export default NavBar;
