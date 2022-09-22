@@ -12,6 +12,7 @@ import {
   PopoverContent,
   useDisclosure,
   VisuallyHidden,
+  Fade,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -30,54 +31,60 @@ const NavBar = () => {
 
   return (
     <Box padding={"16px"} maxW={"1300px"} m={"0 auto"}>
-      <Flex
-        bg={"white"}
-        color={"gray.600"}
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 2 }}
-        align={"center"}
-      >
+      <Fade in={true} delay={0.25}>
         <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
+          bg={"white"}
+          color={"gray.600"}
+          minH={"60px"}
+          py={{ base: 2 }}
+          px={{ base: 2 }}
+          align={"center"}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <NextLink href={"/"} passHref>
-            <Link>
-              <ClubLogo height={100} width={100} colour={"#1b135c"} />
-              <VisuallyHidden>Home</VisuallyHidden>
-            </Link>
-          </NextLink>
-
-          <Flex display={{ base: "none", md: "flex" }} ml={"auto"} mr={32}>
-            <DesktopNav navItems={NAV_ITEMS} />
+          <Flex
+            flex={{ base: 1, md: "auto" }}
+            ml={{ base: -2 }}
+            display={{ base: "flex", md: "none" }}
+          >
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? (
+                  <CloseIcon w={3} h={3} />
+                ) : (
+                  <HamburgerIcon w={5} h={5} />
+                )
+              }
+              variant={"ghost"}
+              aria-label={"Toggle Navigation"}
+            />
           </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+            <NextLink href={"/"} passHref>
+              <Link>
+                <ClubLogo height={100} width={100} colour={"#1b135c"} />
+                <VisuallyHidden>Home</VisuallyHidden>
+              </Link>
+            </NextLink>
+
+            <Flex display={{ base: "none", md: "flex" }} ml={"auto"} mr={32}>
+              <DesktopNav navItems={NAV_ITEMS} />
+            </Flex>
+          </Flex>
+
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={"flex-end"}
+            direction={"row"}
+            spacing={6}
+          >
+            <RegisterButton />
+          </Stack>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <RegisterButton />
-        </Stack>
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav navItems={NAV_ITEMS} />
-      </Collapse>
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav navItems={NAV_ITEMS} />
+        </Collapse>
+      </Fade>
     </Box>
   );
 };

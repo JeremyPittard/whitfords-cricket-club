@@ -1,4 +1,5 @@
-import React from "react";
+import NextLink from "next/link";
+
 import {
   Box,
   Stack,
@@ -10,7 +11,6 @@ import {
   Icon,
   Text,
   Container,
-  Heading,
 } from "@chakra-ui/react";
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
@@ -92,42 +92,50 @@ const Footer = () => {
       <Divider w="95%" mx="auto" h="3.5px" borderColor={"brand.300"} />
       <VStack py={6}>
         <HStack justify="center">
-          <Link p={4}>
-            <Icon
-              color="white"
-              _hover={{ color: "brand.200" }}
-              h="20px"
-              w="20px"
-              as={FaFacebookF}
-            />
-          </Link>
-          <Link p={4}>
-            <Icon
-              color="white"
-              _hover={{ color: "brand.200" }}
-              h="20px"
-              w="20px"
-              as={FiTwitter}
-            />
-          </Link>
-          <Link p={4}>
-            <Icon
-              color="white"
-              _hover={{ color: "brand.200" }}
-              h="20px"
-              w="20px"
-              as={GrInstagram}
-            />
-          </Link>
-          <Link p={4}>
-            <Icon
-              color="white"
-              _hover={{ color: "brand.200" }}
-              h="20px"
-              w="20px"
-              as={FaLinkedinIn}
-            />
-          </Link>
+          <NextLink passHref href="#">
+            <Link p={4}>
+              <Icon
+                color="white"
+                _hover={{ color: "brand.200" }}
+                h="20px"
+                w="20px"
+                as={FaFacebookF}
+              />
+            </Link>
+          </NextLink>
+          <NextLink passHref href="#">
+            <Link p={4}>
+              <Icon
+                color="white"
+                _hover={{ color: "brand.200" }}
+                h="20px"
+                w="20px"
+                as={FiTwitter}
+              />
+            </Link>
+          </NextLink>
+          <NextLink passHref href="#">
+            <Link p={4}>
+              <Icon
+                color="white"
+                _hover={{ color: "brand.200" }}
+                h="20px"
+                w="20px"
+                as={GrInstagram}
+              />
+            </Link>
+          </NextLink>
+          <NextLink passHref href="#">
+            <Link p={4}>
+              <Icon
+                color="white"
+                _hover={{ color: "brand.200" }}
+                h="20px"
+                w="20px"
+                as={FaLinkedinIn}
+              />
+            </Link>
+          </NextLink>
         </HStack>
         <Text textAlign="center" fontSize="smaller" color="brand.200">
           &copy; {date.getFullYear()} Copyright. All rights reserved.

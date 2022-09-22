@@ -2,7 +2,15 @@ import { Box, chakra, SimpleGrid, Image } from "@chakra-ui/react";
 import RegisterButton from "./RegisterButton";
 import { WrappedImage } from "./WrappedImage";
 
-const Feature = ({ img, content, title, rightImage = true, url }) => {
+const Feature = ({
+  img,
+  content,
+  title,
+  rightImage = true,
+  url,
+  showButton = true,
+  buttonLink,
+}) => {
   if (rightImage) {
     return (
       <Box px={8} py={20} mx="auto">
@@ -35,7 +43,7 @@ const Feature = ({ img, content, title, rightImage = true, url }) => {
             >
               {content}
             </chakra.p>
-            <RegisterButton />
+            {showButton && <RegisterButton />}
           </Box>
           <Box w="full" h="full" bg="gray.200">
             <WrappedImage
@@ -44,6 +52,7 @@ const Feature = ({ img, content, title, rightImage = true, url }) => {
               alt="#"
               src={img}
               layout="responsive"
+              objectFit={"cover"}
             />
           </Box>
         </SimpleGrid>
@@ -90,6 +99,7 @@ const Feature = ({ img, content, title, rightImage = true, url }) => {
               alt="#"
               src={img}
               layout="responsive"
+              objectFit={"cover"}
             />
           </Box>
         </SimpleGrid>

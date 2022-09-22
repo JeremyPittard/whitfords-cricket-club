@@ -7,7 +7,6 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import RegisterButton from "./RegisterButton";
-import { WrappedImage } from "./WrappedImage";
 
 const Hero = ({ title, img, isLarge, hideButton }) => {
   return (

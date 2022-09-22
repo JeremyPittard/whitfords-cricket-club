@@ -4,6 +4,7 @@ import Feature from "../components/Feature";
 import SponsorsGrid from "../components/SponsorsGrid";
 import CTA from "../components/CTA";
 import Transition from "../components/Transition";
+import Card from "../components/Card";
 
 const Home = () => {
   const dummyContent = `No. We're on the top. Guess again. Who are those horrible orange men? No, I'm Santa Claus! I don't know what you did, Fry, but once again, you screwed up! Now all the planets are gonna start cracking wise about our mamas.
