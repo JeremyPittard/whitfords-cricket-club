@@ -34,57 +34,57 @@ It doesn't look so shiny to me. I was all of history's great robot actors - Acti
       />
       <SimpleGrid px={8} py={20} columns={{ base: 1, md: 3 }} spacing={8}>
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
       </SimpleGrid>
@@ -108,57 +108,57 @@ It doesn't look so shiny to me. I was all of history's great robot actors - Acti
       />
       <SimpleGrid px={8} py={20} columns={{ base: 1, md: 3 }} spacing={8}>
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
         <Card
-          title="Yearbook 1"
+          title="Event 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"quick year summary to go here"}
+          description={"Event summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
       </SimpleGrid>
