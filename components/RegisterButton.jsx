@@ -14,6 +14,7 @@ const RegisterButton = () => {
         "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE"
       }
       target="_blank"
+      rel="noopener noreferrer"
       onClick={() => {}}
       _hover={{
         textDecoration: "none",

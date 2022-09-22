@@ -111,7 +111,6 @@ const DesktopNav = ({ navItems }) => {
                     textDecoration: "none",
                     color: linkHoverColor,
                   }}
-                  target={navItem.external && "_blank"}
                 >
                   {navItem.label}
                 </Link>
@@ -145,6 +144,7 @@ const DesktopNav = ({ navItems }) => {
                 fontSize={"md"}
                 fontWeight={500}
                 color={linkColor}
+                rel={navItem.external && "noopener noreferrer"}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
@@ -169,6 +169,7 @@ const DesktopSubNav = ({ label, href, subLabel, external }) => {
         p={2}
         rounded={"md"}
         target={external && "_blank"}
+        rel={external && "noopener noreferrer"}
         _hover={{ bg: "brand.500" }}
       >
         <Stack direction={"row"} align={"center"}>

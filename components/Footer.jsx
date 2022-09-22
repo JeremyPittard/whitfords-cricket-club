@@ -1,5 +1,3 @@
-import NextLink from "next/link";
-
 import {
   Box,
   Stack,
@@ -12,6 +10,7 @@ import {
   Text,
   Container,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
@@ -75,11 +74,39 @@ const Footer = () => {
           }}
         >
           <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">Photos</Link>
-            <Link textTransform="uppercase">Year Book</Link>
-            <Link textTransform="uppercase">Premierships</Link>
-            <Link textTransform="uppercase">Register</Link>
-            <Link textTransform="uppercase">Watch</Link>
+            <NextLink href="/photos" passHref>
+              <Link textTransform="uppercase">Photos</Link>
+            </NextLink>
+            <NextLink href="/yearbook" passHref>
+              <Link textTransform="uppercase">Yearbook</Link>
+            </NextLink>
+            <NextLink href="/premierships" passHref>
+              <Link textTransform="uppercase">Premierships</Link>
+            </NextLink>
+            <NextLink
+              href="https://play.cricket.com.au/club/whitfords-cricket-club/804bfad7-86d8-eb11-a7ad-2818780da0cc"
+              passHref
+            >
+              <Link
+                textTransform="uppercase"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Register
+              </Link>
+            </NextLink>
+            <NextLink
+              href="https://matchcentre.aus.frogbox.live/matches?entity=1455"
+              passHref
+            >
+              <Link
+                textTransform="uppercase"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch
+              </Link>
+            </NextLink>
           </Flex>
           <Flex justify="start" direction="column">
             <Link textTransform="uppercase">Contact Us</Link>

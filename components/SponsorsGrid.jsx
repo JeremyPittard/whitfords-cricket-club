@@ -50,7 +50,13 @@ const Sponsor = ({
             {/* ************************************************************************ website link ******************************************************************** */}
             {website && (
               <NextLink passHref href={website}>
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
@@ -64,7 +70,13 @@ const Sponsor = ({
             {/* ************************************************************************ facebook link ******************************************************************** */}
             {facebook && (
               <NextLink passHref href={facebook}>
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
@@ -78,7 +90,13 @@ const Sponsor = ({
             {/* ************************************************************************ twitter link *********************************************************************** */}
             {twitter && (
               <NextLink passHref href="#">
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
@@ -92,7 +110,13 @@ const Sponsor = ({
             {/* ************************************************************************ insta link *********************************************************************** */}
             {insta && (
               <NextLink passHref href={insta}>
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
@@ -107,7 +131,13 @@ const Sponsor = ({
 
             {email && (
               <NextLink passHref href={`mailto:${email}`}>
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
@@ -121,7 +151,13 @@ const Sponsor = ({
             {/* ************************************************************************ phone link *********************************************************************** */}
             {phone && (
               <NextLink passHref href={`tel:${phone}`}>
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
@@ -135,7 +171,13 @@ const Sponsor = ({
             {/* ************************************************************************ address link *********************************************************************** */}
             {address && (
               <NextLink passHref href={address}>
-                <Link pr={4} pl={{ base: 4, md: 0 }} py={4} target="_blank">
+                <Link
+                  pr={4}
+                  pl={{ base: 4, md: 0 }}
+                  py={4}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon
                     color="brand.500"
                     _hover={{ color: "brand.200" }}
