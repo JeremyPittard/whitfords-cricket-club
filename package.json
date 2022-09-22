@@ -12,6 +12,7 @@
     "@chakra-ui/icons": "^2.0.8",
     "@chakra-ui/react": "^2.3.4",
     "@chakra-ui/skip-nav": "^2.0.8",
+    "@choc-ui/paginator": "^3.4.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@fontsource/atkinson-hyperlegible": "^4.5.9",

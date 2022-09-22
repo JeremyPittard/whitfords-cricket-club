@@ -4,6 +4,7 @@ import Transition from "../components/Transition";
 import { SimpleGrid } from "@chakra-ui/react";
 import Feature from "../components/Feature";
 import Card from "../components/Card";
+import Pagination from "@choc-ui/paginator";
 
 const Events = () => {
   const dummyContent = `
@@ -50,7 +51,53 @@ It doesn't look so shiny to me. I was all of history's great robot actors - Acti
           description={"quick year summary to go here"}
           link={"/mofo_program_2009.pdf"}
         />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
       </SimpleGrid>
+      <Pagination
+        pageSize={10}
+        total={500}
+        paginationProps={{
+          display: "flex",
+          pos: "absolute",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      />
 
       <Feature
         title="Past Events"
@@ -60,6 +107,42 @@ It doesn't look so shiny to me. I was all of history's great robot actors - Acti
         img="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
       />
       <SimpleGrid px={8} py={20} columns={{ base: 1, md: 3 }} spacing={8}>
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
+        <Card
+          title="Yearbook 1"
+          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+          description={"quick year summary to go here"}
+          link={"/mofo_program_2009.pdf"}
+        />
         <Card
           title="Yearbook 1"
           img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"

@@ -38,7 +38,7 @@ const Sponsor = ({
       >
         <WrappedImage layout="fill" alt="#" src={img} objectFit="contain" />
       </Flex>
-      <chakra.h3 mb={2} color="brand.500" fontWeight={"semibold"}>
+      <chakra.h3 mb={2} color="brand.500" fontWeight={"bold"}>
         {title}
       </chakra.h3>
       {showDetails && (
