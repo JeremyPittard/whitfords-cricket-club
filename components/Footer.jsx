@@ -52,7 +52,6 @@ const Footer = () => {
           }}
         >
           <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">Contact</Link>
             <Text>
               McDonald Reserve, Marmion Ave &amp; Forest Road, Padbury WA 6025
             </Text>
@@ -83,9 +82,7 @@ const Footer = () => {
             <Link textTransform="uppercase">Watch</Link>
           </Flex>
           <Flex justify="start" direction="column">
-            <Link textTransform="uppercase">About Us</Link>
             <Link textTransform="uppercase">Contact Us</Link>
-            <Link textTransform="uppercase">Resources</Link>
           </Flex>
         </HStack>
       </Stack>
