@@ -1,6 +1,6 @@
 import { Box, Flex, HStack, chakra, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { WrappedImage } from "./WrappedImage";
+import WrappedImage from "./WrappedImage";
 
 const Card = ({
   title,

@@ -1,7 +1,7 @@
 import NextImage from "next/image";
 import { chakra } from "@chakra-ui/react";
 
-export const WrappedImage = chakra(NextImage, {
+const WrappedImage = chakra(NextImage, {
   baseStyle: { maxH: 120, maxW: 120 },
   shouldForwardProp: (prop) =>
     [
@@ -16,3 +16,5 @@ export const WrappedImage = chakra(NextImage, {
       "layout",
     ].includes(prop),
 });
+
+export default WrappedImage;

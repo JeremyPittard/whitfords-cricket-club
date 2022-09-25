@@ -1,6 +1,6 @@
 import { Box, chakra, SimpleGrid, Image } from "@chakra-ui/react";
 import RegisterButton from "./RegisterButton";
-import { WrappedImage } from "./WrappedImage";
+import WrappedImage from "./WrappedImage";
 
 const Feature = ({
   img,

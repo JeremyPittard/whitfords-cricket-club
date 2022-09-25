@@ -8,7 +8,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { WrappedImage } from "./WrappedImage";
+import WrappedImage from "./WrappedImage";
 import { dummySponsors } from "../utils/dummyData";
 import { GrInstagram, GrMapLocation } from "react-icons/gr";
 import { FaFacebookF, FaMapMarkedAlt } from "react-icons/fa";
