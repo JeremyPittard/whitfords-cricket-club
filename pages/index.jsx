@@ -5,6 +5,8 @@ import SponsorsGrid from "../components/SponsorsGrid";
 import CTA from "../components/CTA";
 import Transition from "../components/Transition";
 import Card from "../components/Card";
+import Paginated from "../components/PaginatedEvents";
+import PaginatedEvents from "../components/PaginatedEvents";
 
 const Home = () => {
   const dummyContent = `No. We're on the top. Guess again. Who are those horrible orange men? No, I'm Santa Claus! I don't know what you did, Fry, but once again, you screwed up! Now all the planets are gonna start cracking wise about our mamas.
@@ -41,6 +43,7 @@ const Home = () => {
         content={dummyContent}
         img="https://images.unsplash.com/photo-1562077772-3bd90403f7f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"
       />
+      <PaginatedEvents resultsPerPage={3} totalToShow={3} />
       <SponsorsGrid showDetails={false} />
       <CTA
         firstLine={"Want to join forces?"}

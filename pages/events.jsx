@@ -4,7 +4,8 @@ import Transition from "../components/Transition";
 import { SimpleGrid } from "@chakra-ui/react";
 import Feature from "../components/Feature";
 import Card from "../components/Card";
-import Pagination from "@choc-ui/paginator";
+import { DummyEvents as dummyEvents } from "../utils/dummyEvents";
+import PaginatedEvents from "../components/PaginatedEvents";
 
 const Events = () => {
   const dummyContent = `
@@ -32,72 +33,7 @@ It doesn't look so shiny to me. I was all of history's great robot actors - Acti
         showButton={false}
         img="https://images.unsplash.com/photo-1630395822970-acd6a691d97e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
       />
-      <SimpleGrid px={8} py={20} columns={{ base: 1, md: 3 }} spacing={8}>
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-      </SimpleGrid>
-      <Pagination
-        pageSize={10}
-        total={500}
-        paginationProps={{
-          display: "flex",
-          pos: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-      />
+      <PaginatedEvents data={dummyEvents} resultsPerPage={6} />
 
       <Feature
         title="Past Events"
@@ -106,62 +42,7 @@ It doesn't look so shiny to me. I was all of history's great robot actors - Acti
         showButton={false}
         img="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
       />
-      <SimpleGrid px={8} py={20} columns={{ base: 1, md: 3 }} spacing={8}>
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-        <Card
-          title="Event 1"
-          img="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-          description={"Event summary to go here"}
-          link={"/mofo_program_2009.pdf"}
-        />
-      </SimpleGrid>
+      <PaginatedEvents data={dummyEvents} resultsPerPage={6} />
     </Transition>
   );
 };
