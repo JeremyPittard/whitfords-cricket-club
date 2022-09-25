@@ -42,7 +42,11 @@ const Home = () => {
         img="https://images.unsplash.com/photo-1562077772-3bd90403f7f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80"
       />
       <SponsorsGrid showDetails={false} />
-      <CTA />
+      <CTA
+        firstLine={"Want to join forces?"}
+        secondLine={"speak to someone about sponsorship"}
+        link={"mailto:test@google.com??subject=Sponsorship-Enquiry"}
+      />
     </Transition>
   );
 };

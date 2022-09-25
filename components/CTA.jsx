@@ -1,6 +1,7 @@
 import { chakra, Box, Flex, Stack, Link } from "@chakra-ui/react";
+import NextLink from "next/link";
 
-const CTA = () => {
+const CTA = ({ firstLine, secondLine, link, secondLink }) => {
   return (
     <Flex
       bg="#white"
@@ -26,9 +27,9 @@ const CTA = () => {
             lineHeight="shorter"
             color="brand.500"
           >
-            <chakra.span display="block">Want to join forces?</chakra.span>
+            <chakra.span display="block">{firstLine}</chakra.span>
             <chakra.span display="block" color="blue.500">
-              speak to someone about sponsorship
+              {secondLine}
             </chakra.span>
           </chakra.h2>
           <Stack
@@ -36,46 +37,28 @@ const CTA = () => {
             mt={{ base: 8, lg: 0 }}
             flexShrink={{ lg: 0 }}
           >
-            <Link
-              w={["full", , "auto"]}
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={5}
-              py={3}
-              border="solid transparent"
-              fontWeight="bold"
-              rounded="md"
-              shadow="md"
-              _light={{ color: "white" }}
-              bg="brand.600"
-              _dark={{ bg: "brand.500" }}
-              _hover={{
-                bg: "brand.700",
-                _dark: { bg: "brand.600" },
-              }}
-            >
-              Get started
-            </Link>
-            <Link
-              w={["full", , "auto"]}
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              px={5}
-              py={3}
-              border="solid transparent"
-              fontWeight="bold"
-              rounded="md"
-              shadow="md"
-              color="brand.600"
-              bg="white"
-              _hover={{
-                bg: "brand.50",
-              }}
-            >
-              Learn More
-            </Link>
+            <NextLink href={link} passHref>
+              <Link
+                w={["full", , "auto"]}
+                display="inline-flex"
+                alignItems="center"
+                justifyContent="center"
+                px={5}
+                py={3}
+                border="solid transparent"
+                fontWeight="bold"
+                rounded="md"
+                shadow="md"
+                color="white"
+                bg="brand.500"
+                _hover={{
+                  bg: "brand.200",
+                  color: "brand.500",
+                }}
+              >
+                Get started
+              </Link>
+            </NextLink>
           </Stack>
         </Box>
       </Box>

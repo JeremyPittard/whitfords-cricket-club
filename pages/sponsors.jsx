@@ -3,9 +3,9 @@ import Hero from "../components/Hero";
 import SponsorsGrid from "../components/SponsorsGrid";
 import CTA from "../components/CTA";
 import Transition from "../components/Transition";
-import { motion } from "framer-motion";
-
 import { useRouter } from "next/router";
+import { Box } from "@chakra-ui/react";
+import AccordionComponent from "../components/Accordion";
 
 const Sponsors = () => {
   const variants = {
@@ -30,7 +30,11 @@ const Sponsors = () => {
         hideButton={true}
       />
       <SponsorsGrid showDetails={true} />
-      <CTA />
+      <CTA
+        firstLine={"Want to join forces?"}
+        secondLine={"speak to someone about sponsorship"}
+        link={"mailto:test@google.com??subject=Sponsorship-Enquiry"}
+      />
     </Transition>
   );
 };
