@@ -38,6 +38,7 @@ export const NAV_ITEMS = [
         label: "Fixtures",
         subLabel: "fixtures for upcoming matches on mycricket",
         href: "https://mycricket.cricket.com.au/common/pages/public/rv/draw.aspx?entityid=1455&id=RVFIXTURE",
+        external: true,
       },
       {
         label: "Events",
