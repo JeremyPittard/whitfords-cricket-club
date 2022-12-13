@@ -56,6 +56,8 @@ const PaginatedEvents = ({
             description={post.title}
             link={"/mofo_program_2009.pdf"}
             key={`event_${post.title.replaceAll(" ", "")}`}
+            isDownload={false}
+            linkText={`see more`}
           />
         ))}
       </SimpleGrid>
