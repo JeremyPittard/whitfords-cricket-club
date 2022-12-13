@@ -43,7 +43,12 @@ const PaginatedEvents = ({
     <Spinner />
   ) : (
     <Box py="20">
-      <SimpleGrid px={8} mb="20" columns={{ base: 1, md: 3 }} spacing={8}>
+      <SimpleGrid
+        px={8}
+        mb={pageSize < 6 ? "0" : "20"}
+        columns={{ base: 1, md: 3 }}
+        spacing={8}
+      >
         {posts.map((post) => (
           <Card
             title={post.title}

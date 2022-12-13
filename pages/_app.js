@@ -31,6 +31,7 @@ function MyApp({ Component, pageProps }) {
       <NavBar />
       <SkipNavContent>
         <AnimatePresence
+          mode="wait"
           key={`app-${router.asPath}`}
           onExitComplete={handleExitComplete}
         >

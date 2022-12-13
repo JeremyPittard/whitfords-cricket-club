@@ -9,20 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.8",
-    "@chakra-ui/react": "^2.3.4",
-    "@chakra-ui/skip-nav": "^2.0.8",
+    "@chakra-ui/icons": "^2.0.13",
+    "@chakra-ui/react": "^2.4.3",
+    "@chakra-ui/skip-nav": "^2.0.12",
     "@choc-ui/paginator": "^3.4.0",
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@fontsource/atkinson-hyperlegible": "^4.5.9",
-    "framer-motion": "^7.3.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/atkinson-hyperlegible": "^4.5.10",
+    "framer-motion": "^7.7.2",
     "mailgo": "^0.12.2",
-    "next": "^12.3.1",
+    "next": "^12.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "sass": "^1.54.9"
+    "react-icons": "^4.7.1",
+    "sass": "^1.56.2"
   },
   "devDependencies": {
     "eslint": "8.22.0",
